@@ -1,0 +1,82 @@
+body{
+    background-color: #5c5c5c;
+}
+.circle{
+    display: flex;
+     /*CENTRADO DESDE ARRIBA*/
+     align-items: center;
+     /*centrado horizontal*/
+     justify-content: center;
+     /*CENTRADO DESDE ARRIBA*/
+     min-height: 100vh;
+}
+a{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-left: 5px solid #001E6C;
+    border-top: 5px solid #035397;
+    border-right: 5px solid #E8630A;
+    border-bottom: 5px solid #FCD900;
+    border-radius: 100px;
+    animation-name: giro;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: 0.5s;
+}
+a:hover{
+    width: 150px;
+    height: 150px;
+    animation: none;
+    border: 5px solid #ffffff;
+    background-color: rgb(90, 92, 207);
+}
+@keyframes giro {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+
+}
+.menu{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.menu > ul{
+    background-color: v;
+    height: 20px;
+    width: 50px;
+    margin-bottom:15px;
+    position: relative;
+}
+.menu > ul::before{
+    content: "";
+    position: absolute;
+    margin-left: -40px;
+    width: 90px;
+    height: 5px;
+    background-color:#ffffff;
+    transition: 0.5s;
+}
+.menu > ul::after{
+    content: "";
+    position: absolute;
+    margin-left: -40px;
+    margin-top: 15px;
+    width: 90px;
+    height: 5px;
+    background-color:#ffffff;
+    transition: 0.5s;
+}
+.menu > ul:hover::before{
+    transition: 0.5s;
+    margin-left: -60px;
+}
+.menu > ul:hover::after{
+    transition: 0.5s;
+    margin-left: 5px;
+}
